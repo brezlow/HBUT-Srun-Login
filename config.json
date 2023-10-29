@@ -1,0 +1,12 @@
+{
+  "userInfo": {
+    "username": "",
+    "password": "",
+    "domain": ""
+  },
+  "platformInfo": {
+    "loginURL": "http://202.114.177.246",
+    "device": "Windows NT",
+    "os": "Windows"
+  }
+}
