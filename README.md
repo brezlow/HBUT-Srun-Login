@@ -51,7 +51,7 @@ pip3 install -r requirement.txt
 | password | string   | 登录校园网的密码                              |
 | domain   | string   | 校园网类型                                    |
 | device   | string   | 设备类型（可填：`Machintosh`, `Windows`,`PowerPC`） |
-| os       | string   | 设备系统（可填：`Mac OS`, `Windows`, `Linux`)       |
+| os       | string   | 设备系统（可填：`Mac OS`, `Windows`, `Linux`）      |
 
 校园网类型：
 
@@ -83,6 +83,18 @@ jQuery112405169380394746533_1650453290998({"ServerFlag":0,"ServicesIntfServerIP"
 ```
 
 代表登录成功。
+
+## reboot to start
+
+在OpenWRT系统中，要确保在系统完全启动后自动执行脚本，你可以使用以下方法：
+
+使用`/etc/rc.local`文件：
+   - 编辑`/etc/rc.local`文件，可以使用`vi`或其他文本编辑器打开它：`vi /etc/rc.local`
+   - 在文件中添加`/bin/sh /root/HBUT-Srun-Login/autoLogin.sh`，确保在文件的`exit 0`行之前。
+   - 保存并退出文件。
+   - 授予`/etc/rc.local`执行权限：`chmod +x /etc/rc.local`
+
+   这个文件会在系统启动的最后阶段执行，通常在其他服务和网络接口都已准备就绪后。
 
 ## License
 
